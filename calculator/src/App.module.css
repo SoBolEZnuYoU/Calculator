@@ -1,0 +1,122 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: inherit;
+	color: inherit;
+	border: none;
+	font-size: 2.4rem;
+	transition-duration: 100ms;
+}
+
+.button:hover {
+	scale: 1.1;
+}
+
+[id='clear'],
+[id='minus'],
+[id='plus'] ,
+[id='result'] {
+	color: rgb(131, 111, 231);
+}
+/*--------------------------------------------------------------------*/
+
+.container {
+	display: flex;
+	align-items: center;
+	padding-left: 20vw;
+	margin: 0 auto;
+	height: 100vh;
+	background: linear-gradient(140deg, rgb(153, 153, 201) 9%, rgb(96, 91, 145) 46%, rgb(79, 71, 167) 82%);
+}
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+	border-radius: 40px;
+	background: #1e1731;
+	width: 350px;
+	height: 70vh;
+	overflow: hidden;
+	padding: 1.3rem;
+	color: #61478e;
+	box-shadow: 5px 10px 10px 1px rgb(0, 0, 0), 10px 15px 10px -13px rgb(24, 24, 24) inset;
+}
+
+.display-block {
+	min-height: 50%;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	padding-block: 1rem;
+	border-bottom: 1px solid #34314e;
+	font-size: 3rem;
+}
+
+.btn-block {
+	padding-top: 1rem;
+	height: 100%;
+	display: grid;
+	grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+	grid-template-areas:
+	"seven eight nine clear"
+	"four five six minus"
+	"one two three plus"
+	"zero zero zero result";
+}
+
+[id='0'] {
+	grid-area: zero;
+}
+[id='1'] {
+	grid-area: one;
+}
+[id='2'] {
+	grid-area: two;
+}
+[id='3'] {
+	grid-area: three;
+}
+[id='4'] {
+	grid-area: four;
+}
+[id='5'] {
+	grid-area: five;
+}
+[id='6'] {
+	grid-area: six;
+}
+[id='7'] {
+	grid-area: seven;
+}
+[id='8'] {
+	grid-area: eight;
+}
+[id='9'] {
+	grid-area: nine;
+}
+[id='clear'] {
+	grid-area: clear;
+}
+[id='minus'] {
+	grid-area: minus;
+}
+[id='plus'] {
+	grid-area: plus;
+}
+[id='result'] {
+	grid-area: result;
+}
+
+@media (max-width: 600px) {
+	.container {
+		padding: 5px;
+	}
+
+	.calculator {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
+	}
+}
